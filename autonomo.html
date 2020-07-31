@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/menu.css">
+    <title>Veículo Autônomo</title>
+
+    <style>
+        
+        
+        article{
+    width: 50%;
+    height: 400px;
+    margin-right: 40%;
+    margin-top: 5%;
+    float: right;
+}
+        
+        aside{
+            width: 30%;
+            height: 400px;
+            margin-top: -400px;
+            background: ;
+            float: right;
+        }
+        
+        .video{
+        width: 70%;
+            margin-top: 1%;
+        height: 250px;
+            margin-left: 200px;
+            background: #fff;
+            border-radius:10px;
+        }
+        
+.container{
+		margin: 0 auto;
+		margin-top: 25%;
+    margin-left: 200px;
+		position: relative;
+		width: 70%;
+		height: 30px;
+		padding-bottom: 38%;
+	  user-select: none;
+		background-color: #1c1c1c;
+		border: solid 5px #616161;
+		border-radius:10px ; 
+	}
+        
+      .container #nav_slide{
+	width: 100%;
+    right: 40%;
+	height: 11px;
+	position: absolute;
+	text-align: center;
+	z-index: 99;
+	cursor: default;
+          color: white;
+}  
+        
+        @keyframes scroll{
+	0%{	opacity:.4;}
+	100%{opacity:1;}
+}
+
+        .slide_img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        .slide_img img{
+            width: 100%;
+            height: 100%;
+        }
+        
+        #i1, #i2, #i3, #i4, #i5{
+            display: none;
+        }
+        
+        .prev, .next{
+		width: 5%;
+		height: 100%;
+		position: absolute;
+		top:0; 
+		background-color: rgba(88, 88, 88,.2);
+		color:rgba(244, 244, 244,.9);
+		z-index: 99;
+		transition: .45s;
+		cursor: pointer;
+		text-align: center;
+	}
+        
+	.next{
+        right:0;
+        }
+        
+	.prev{
+        left:0;
+        }
+        
+    .prev:hover, .next:hover{
+		transition: .3s;
+		background-color: rgba(88, 88, 89,.8);
+		color: #ffffff; 
+	}
+        .nav{
+            width: 100%;
+            height: 100%;
+            bottom: 12%;
+            position: absolute;
+            text-align: center;
+            z-index: 99;
+        }
+        
+        .dots{
+            top:auto;
+            left: 40%;
+            width: 5px;
+            height: 5px;
+            margin: 0 4px;
+            position: relative;
+            border-radius: 50%;
+            display: inline-block;
+            background: rgba(2,0,0,.6); 
+        }
+        
+    #i1:checked ~ #one  ,
+	#i2:checked ~ #two  ,
+	#i3:checked ~ #three,
+	#i4:checked ~ #four ,
+	#i5:checked ~ #five 
+	{z-index: 9; animation: scroll 1s ease-in-out;}
+        
+    #i1:checked  ~  #nav_slide #dot1,
+	#i2:checked  ~  #nav_slide #dot2,
+	#i3:checked  ~  #nav_slide #dot3,
+	#i4:checked  ~  #nav_slide #dot4,
+	#i5:checked  ~  #nav_slide #dot5
+	{ background-color: rgba(255,255,255,.9);}
+
+label span{
+		position: absolute;
+		font-size: 40px;
+    right: 2px;
+    
+		top: 50%;
+	 	transform: translateY(-50%);
+	}
+        
+        @media only screen and (min-device-width: 1000px) and (max-device-width: 1400px) and (-webkit-min-device-pixel-ratio: 1) {
+            
+            p{
+                font-size: 25px;
+            }
+}            
+            @media only screen and (min-device-width: 300px) and (max-device-width: 800px) and (-webkit-min-device-pixel-ratio: 1) {
+            
+            p{
+                font-size: 32px;
+            }
+                
+        }            
+        
+        
+        p{
+            font-size: 25px;
+            word-wrap: break-word;
+            color: white;
+            font-family: Arial;
+            
+        }
+        
+            </style>
+
+</head>
+
+<body>
+
+    <input type="checkbox" id="chk">
+    <label for="chk" class="menu-icon">&#9776;
+    </label>
+
+    <div class="bg"></div>
+
+    <nav class="menu" id="principal">
+        <ul>
+            <li><a href="index.html" class="voltar">Voltar</a></li>
+            <li><a href="formacao.html">Formação</a></li>
+            <li><a href="#projeto">Projeto <span>+</span></a>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <nav class="menu" id="projeto">
+        <ul>
+            <li><a href="#principal" class="voltar">Voltar</a></li>
+            <li><a href="autonomo.html">Veículo Autônomo</a></li>
+            <li><a href="service.html">Site Cliente-Servidor</a></li>
+        </ul>
+    </nav>
+    
+    <div id="bandeira">
+               <a href="autonomo.html"><div class="bandeira" id="b-brasil"></div></a>
+           <a href="autoneua.html"><div class="bandeira" id="b-eua"></div></a>
+           <a href="autoesp.html"><div class="bandeira" id="b-espanha"></div></a>       
+           </div>
+
+    <article>
+
+        <div class="video">
+
+<video width="100%" height="250" controls="controls" autoplay="autoplay">
+<source src="video/autonomo.mp4" type="video/mp4">
+<object data="" width="100%" height="250">
+<embed width="100%" height="250" src="video/autonomo.mp4">
+</object>
+</video>
+
+        </div>
+
+        <div class="container">
+
+            <input type="radio" id="i1" name="images" checked />
+            <input type="radio" id="i2" name="images" />
+            <input type="radio" id="i3" name="images" />
+            <input type="radio" id="i4" name="images" />
+            <input type="radio" id="i5" name="images" />
+
+            <div class="slide_img" id="one">
+
+                <img src="img/autonomo1.jpg" alt="">
+                
+                <label class="prev" for="i5"><span>&#x2039;</span></label>
+				<label class="next" for="i2"><span>&#x203a;</span></label>
+            </div>
+
+            <div class="slide_img" id="two">
+
+                <img src="img/autonomo2.bmp" alt="">
+                
+                <label class="prev" for="i1"><span>&#x2039;</span></label>
+				<label class="next" for="i3"><span>&#x203a;</span></label>
+                
+                
+            </div>
+
+            <div class="slide_img" id="three">
+
+                <img src="img/autonomo3.jpg" alt="">
+                
+                <label class="prev" for="i2"><span>&#x2039;</span></label>
+				<label class="next" for="i4"><span>&#x203a;</span></label>
+                
+                
+            </div>
+
+            <div class="slide_img" id="four">
+
+                <img src="img/autonomo4.jpg" alt="">
+                
+                <label class="prev" for="i3"><span>&#x2039;</span></label>
+				<label class="next" for="i5"><span>&#x203a;</span></label>
+                
+                
+            </div>
+
+            <div class="slide_img" id="five">
+
+                <img src="img/autonomo5.jpg" alt="">
+                
+                <label class="prev" for="i4"><span>&#x2039;</span></label>
+				<label class="next" for="i1"><span>&#x203a;</span></label> 
+                
+            </div>
+
+<div id="nav_slide">
+		<label for="i1" class="dots" id="dot1"></label>
+		<label for="i2" class="dots" id="dot2"></label>
+		<label for="i3" class="dots" id="dot3"></label>
+		<label for="i4" class="dots" id="dot4"></label>
+		<label for="i5" class="dots" id="dot5"></label>
+	</div>
+
+        </div>
+    </article>
+    <aside>
+        <p>
+            O veículo autonômo se desloca em ambiente desestruturado, fazendo movimentações autônomas, dirigindo de um ponto a outro do ambiente automaticamente. O veículo utiliza sensores do tipo ultrassônicos para medir a distância de possíveis obstáculos, podendo desviar-se dos mesmos de forma autônoma, evitando assim colisões. Para a implementação do software utilizou-se a plataforma computacional embarcada do tipo Arduino.
+            <br>
+            Foram testados diferentes algoritmos para a identificação e desvio de obstáculos. Cada um dos procedimentos de aprendizagem mostra um diferente tipo de mecanismo evolutivo. Experimentos de simulação mostraram que o sistema de desvio de obstáculos é capaz de aprender estratégias de navegações em ambientes desconhecidos, com reduzido custo e tempo computacional. 
+        </p>
+        
+
+
+
+    </aside>
+
+</body>
+
+</html>

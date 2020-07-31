@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/menu.css">
+    <title>Portal</title>
+    
+    <style>
+        article{
+            height: auto;
+            width: 60%;
+            float: left;
+            margin-top: 25%;
+            margin-left: 25%;
+            margin-right: 25%;
+            background:;
+        }
+        
+        h1{
+            color: darkblue;
+            font-family: Arial;
+            background: lightblue;
+            border-radius: 10px;
+            margin-top: auto;
+            font-size: 20px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        
+        h2{
+            color:white;
+            text-align: justify;
+            font-size: 20px;
+            font-family:sans-serif;
+            word-wrap: break-word;
+        }
+        
+        @media only screen and (max-device-width: 750px) and (-webkit-min-device-pixel-ratio: 1) {
+            h1,h2{
+                font-size: 30px;
+            }
+        }
+        
+        @media only screen and (min-device-width: 1200px) and (max-device-width: 1700px) and (-webkit-min-device-pixel-ratio: 1) {
+            article{
+                width: 50%;
+            margin-top: 15%;
+            margin-left: 25%;
+            margin-right: 10%;
+            }
+            
+            h2{
+                width:auto;
+                margin-top: auto;
+            }
+            
+        }
+        
+        @media only screen and (min-device-width: 2300px) and (max-device-width: 2700px) and (-webkit-min-device-pixel-ratio: 1) {
+         h1,h2{
+                font-size: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+ 
+ <header>
+     
+ </header>
+  <input type="checkbox" id="chk">
+  <label for="chk" class="menu-icon">&#9776;
+  </label>
+      
+      <div class="bg"></div>
+      
+      <nav class="menu" id="principal">
+       <ul>
+          <li><a href="indexesp.html" class="voltar">Vuelve</a></li>
+           <li><a href="formesp.html">Formación Académica</a></li>
+           <li><a href="#projeto">Proyecto <span>+</span></a>
+           <li><a href="contesp.html">Contacto</a></li>
+       </ul>
+       </nav>
+       
+       <nav class="menu" id="projeto">
+           <ul>
+               <li><a href="#principal" class="voltar">Vuelve</a></li>
+               <li><a href="autoesp.html">Vehículo Autónomo</a></li>
+               <li><a href="serviesp.html">Servidor web-cliente</a></li>
+            </ul>
+       </nav>
+       
+       <div id="bandeira">
+               <a href="index.html"><div class="bandeira" id="b-brasil"></div></a>
+           <a href="indexeua.html"><div class="bandeira" id="b-eua"></div></a>
+           <a href="indexesp.html"><div class="bandeira" id="b-espanha"></div></a>
+       </div>
+       
+       <Article>
+           
+           
+           <h1>
+             ¡Bienvenido a mi sitio web para publicar mi CV!
+           </h1>
+           <h2>
+                 Este espacio fue creado para ver mi currículum. Dentro del menú, ubicado en la esquina superior izquierda, hay algunos temas y subtemas de logros y experiencias profesionales / académicas.                   
+               </h2>
+           
+                  </Article>
+ </body>
+</html>
